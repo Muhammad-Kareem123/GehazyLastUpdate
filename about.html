@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حول - جهاز المدينة</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts - Arabic -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">جهاز المدينة</a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+            <li><a href="news.html" id="nav-news">الأخبار</a></li>
+            <li><a href="booking.html" id="nav-booking">احجز دورك</a></li>
+            <li><a href="complaint.html" id="nav-complaint">تقديم شكوى</a></li>
+            <li><a href="about.html" id="nav-about" class="active">حول</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="Login.html"><button class="login-btn">تسجيل دخول</button></a>
+            <a href="Signup.html"><button class="signup-header-btn">إنشاء حساب</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section"
+      style="background: linear-gradient(rgba(10, 77, 146, 0.8), rgba(0, 51, 102, 0.9)), url('Pictures/1.webp') no-repeat center center; background-size: cover;">
+      <div class="hero-content">
+        <h1 class="hero-title">حول جهاز المدينة</h1>
+        <p class="hero-description">تعرف على رؤيتنا ورسالتنا وقيمنا وتاريخنا</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 style="color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 2rem;">من نحن</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-medium); line-height: 1.8;">
+              جهاز المدينة هو هيئة حكومية تأسست عام 1990 بهدف تطوير وإدارة المدينة وتقديم الخدمات الأساسية للمواطنين
+              والمقيمين. يعمل الجهاز تحت إشراف وزارة الشؤون البلدية والقروية والإسكان، ويضم فريقًا من الخبراء والمتخصصين
+              في مختلف المجالات.
+            </p>
+            <p style="margin-bottom: 2rem; color: var(--text-medium); line-height: 1.8;">
+              يسعى جهاز المدينة إلى تحقيق التنمية المستدامة وتحسين جودة الحياة في المدينة من خلال تطوير البنية التحتية
+              وتقديم خدمات متميزة وتسهيل الإجراءات الحكومية. كما يعمل الجهاز على تعزيز الشراكة مع القطاع الخاص والمجتمع
+              المدني لتحقيق أهدافه.
+            </p>
+
+            <h2 style="color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 2rem;">رؤيتنا</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-medium); line-height: 1.8;">
+              أن نكون جهازًا رائدًا في تقديم الخدمات البلدية والحكومية بأعلى معايير الجودة والكفاءة، وأن نساهم في بناء
+              مدينة عصرية مستدامة توفر بيئة معيشية متميزة لسكانها.
+            </p>
+
+            <h2 style="color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 2rem;">رسالتنا</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-medium); line-height: 1.8;">
+              تقديم خدمات بلدية وحكومية متميزة تلبي احتياجات وتطلعات سكان المدينة، وتطوير البنية التحتية وفق أحدث
+              المعايير العالمية، وتسهيل الإجراءات الحكومية من خلال التحول الرقمي والابتكار.
+            </p>
+
+            <h2 style="color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 2rem;">قيمنا</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
+              <div
+                style="flex: 1; min-width: 200px; background-color: var(--primary-lighter); padding: 1.5rem; border-radius: 8px; text-align: center;">
+                <i class="fas fa-handshake" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark);">الشفافية والنزاهة</h3>
+                <p style="color: var(--text-medium);">نلتزم بأعلى معايير الشفافية والنزاهة في جميع تعاملاتنا.</p>
+              </div>
+              <div
+                style="flex: 1; min-width: 200px; background-color: var(--primary-lighter); padding: 1.5rem; border-radius: 8px; text-align: center;">
+                <i class="fas fa-users" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark);">التركيز على المستفيد</h3>
+                <p style="color: var(--text-medium);">نضع المستفيد في مركز اهتمامنا ونسعى لتحقيق رضاه.</p>
+              </div>
+              <div
+                style="flex: 1; min-width: 200px; background-color: var(--primary-lighter); padding: 1.5rem; border-radius: 8px; text-align: center;">
+                <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark);">الابتكار والتميز</h3>
+                <p style="color: var(--text-medium);">نسعى دائمًا للتميز والابتكار في تقديم خدماتنا.</p>
+              </div>
+            </div>
+
+            <h2 style="color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 2rem;">أهدافنا الاستراتيجية</h2>
+            <ul style="margin-bottom: 2rem; color: var(--text-medium); line-height: 1.8; padding-right: 1.5rem;">
+              <li style="margin-bottom: 0.8rem;">تطوير البنية التحتية للمدينة وفق أحدث المعايير العالمية.</li>
+              <li style="margin-bottom: 0.8rem;">تحسين جودة الخدمات البلدية والحكومية المقدمة للمواطنين والمقيمين.</li>
+              <li style="margin-bottom: 0.8rem;">تسهيل الإجراءات الحكومية من خلال التحول الرقمي والابتكار.</li>
+              <li style="margin-bottom: 0.8rem;">تعزيز الشراكة مع القطاع الخاص والمجتمع المدني.</li>
+              <li style="margin-bottom: 0.8rem;">تحقيق التنمية المستدامة والحفاظ على البيئة.</li>
+              <li>تطوير الكوادر البشرية وبناء القدرات.</li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <div
+              style="background-color: var(--primary-lighter); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+              <h3 style="color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center;">
+                الهيكل التنظيمي</h3>
+              <img src="Pictures/istockphoto-1166155384-612x612.jpg" alt="الهيكل التنظيمي"
+                style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+              <p style="color: var(--text-medium); text-align: center;">
+                يتكون جهاز المدينة من عدة إدارات متخصصة تعمل بشكل متكامل لتحقيق أهداف الجهاز.
+              </p>
+              <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="#" class="btn btn-sm">عرض الهيكل التنظيمي</a>
+              </div>
+            </div>
+
+            <div
+              style="background-color: var(--white); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+              <h3 style="color: var(--primary-dark); margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center;">
+                إنجازاتنا</h3>
+              <ul style="color: var(--text-medium); line-height: 1.8; padding-right: 1.5rem;">
+                <li style="margin-bottom: 0.8rem;">تطوير شبكة الطرق الرئيسية في المدينة.</li>
+                <li style="margin-bottom: 0.8rem;">إنشاء محطات معالجة مياه الصرف الصحي.</li>
+                <li style="margin-bottom: 0.8rem;">تطوير نظام إلكتروني متكامل لتقديم الخدمات.</li>
+                <li style="margin-bottom: 0.8rem;">إنشاء حدائق ومتنزهات عامة في مختلف أنحاء المدينة.</li>
+                <li>تنفيذ مشاريع الإسكان الاجتماعي.</li>
+              </ul>
+            </div>
+
+            <div style="background-color: var(--primary); padding: 2rem; border-radius: 8px; color: white;">
+              <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center;">تواصل معنا</h3>
+              <p style="margin-bottom: 1.5rem; text-align: center;">
+                لديك استفسار أو اقتراح؟ لا تتردد في التواصل معنا.
+              </p>
+              <div style="text-align: center;">
+                <a href="complaint.html" class="btn" style="background: white; color: var(--primary);">تواصل معنا</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" style="background-color: var(--primary-lighter);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">فريق القيادة</h2>
+          <p class="section-description">تعرف على قيادات جهاز المدينة</p>
+        </div>
+
+        <div class="row">
+          <!-- Team Member 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center;">
+              <img src="Pictures/photo-1508780709619-79562169bc64.avif" alt="صورة القائد" class="card-img"
+                style="height: 300px; object-fit: cover;">
+              <div class="card-body">
+                <h3 class="card-title">د. أحمد محمد</h3>
+                <p style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">رئيس جهاز المدينة</p>
+                <p class="card-text">خبرة أكثر من 20 عامًا في مجال الإدارة الحكومية والتخطيط الاستراتيجي.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center;">
+              <img src="Pictures/photo-1508780709619-79562169bc64.avif" alt="صورة القائد" class="card-img"
+                style="height: 300px; object-fit: cover;">
+              <div class="card-body">
+                <h3 class="card-title">م. سارة علي</h3>
+                <p style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">نائب رئيس الجهاز للشؤون الفنية
+                </p>
+                <p class="card-text">خبرة واسعة في مجال الهندسة المدنية وإدارة المشاريع الكبرى.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center;">
+              <img src="Pictures/photo-1508780709619-79562169bc64.avif" alt="صورة القائد" class="card-img"
+                style="height: 300px; object-fit: cover;">
+              <div class="card-body">
+                <h3 class="card-title">أ. خالد عبدالله</h3>
+                <p style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">نائب رئيس الجهاز للشؤون
+                  الإدارية</p>
+                <p class="card-text">متخصص في الإدارة المالية والموارد البشرية وتطوير الأداء المؤسسي.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">تاريخنا</h2>
+          <p class="section-description">رحلة جهاز المدينة عبر السنوات</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+          <!-- Timeline Item 1 -->
+          <div style="display: flex; margin-bottom: 3rem;">
+            <div style="min-width: 100px; text-align: center;">
+              <div
+                style="background-color: var(--primary); color: white; padding: 0.5rem; border-radius: 8px; font-weight: 700;">
+                1990</div>
+            </div>
+            <div
+              style="flex: 1; background-color: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); margin-right: 1.5rem; position: relative;">
+              <div
+                style="position: absolute; right: -10px; top: 20px; width: 20px; height: 20px; background-color: var(--primary); border-radius: 50%;">
+              </div>
+              <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">تأسيس جهاز المدينة</h3>
+              <p style="color: var(--text-medium);">تم تأسيس جهاز المدينة بموجب المرسوم الملكي رقم م/15 بتاريخ 5/6/1990.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div style="display: flex; margin-bottom: 3rem;">
+            <div style="min-width: 100px; text-align: center;">
+              <div
+                style="background-color: var(--primary); color: white; padding: 0.5rem; border-radius: 8px; font-weight: 700;">
+                2000</div>
+            </div>
+            <div
+              style="flex: 1; background-color: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); margin-right: 1.5rem; position: relative;">
+              <div
+                style="position: absolute; right: -10px; top: 20px; width: 20px; height: 20px; background-color: var(--primary); border-radius: 50%;">
+              </div>
+              <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">توسع الخدمات</h3>
+              <p style="color: var(--text-medium);">توسعت خدمات الجهاز لتشمل مجالات جديدة مثل الإسكان والبيئة والتنمية
+                الاجتماعية.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div style="display: flex; margin-bottom: 3rem;">
+            <div style="min-width: 100px; text-align: center;">
+              <div
+                style="background-color: var(--primary); color: white; padding: 0.5rem; border-radius: 8px; font-weight: 700;">
+                2010</div>
+            </div>
+            <div
+              style="flex: 1; background-color: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); margin-right: 1.5rem; position: relative;">
+              <div
+                style="position: absolute; right: -10px; top: 20px; width: 20px; height: 20px; background-color: var(--primary); border-radius: 50%;">
+              </div>
+              <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">بداية التحول الرقمي</h3>
+              <p style="color: var(--text-medium);">بدأ الجهاز في تنفيذ خطة شاملة للتحول الرقمي وأتمتة الخدمات.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div style="display: flex;">
+            <div style="min-width: 100px; text-align: center;">
+              <div
+                style="background-color: var(--primary); color: white; padding: 0.5rem; border-radius: 8px; font-weight: 700;">
+                2020</div>
+            </div>
+            <div
+              style="flex: 1; background-color: var(--white); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); margin-right: 1.5rem; position: relative;">
+              <div
+                style="position: absolute; right: -10px; top: 20px; width: 20px; height: 20px; background-color: var(--primary); border-radius: 50%;">
+              </div>
+              <h3 style="color: var(--primary-dark); margin-bottom: 0.5rem;">إطلاق المنصة الإلكترونية</h3>
+              <p style="color: var(--text-medium);">تم إطلاق المنصة الإلكترونية الشاملة لتقديم جميع خدمات الجهاز عبر
+                الإنترنت.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>عن جهاز المدينة</h3>
+        <p>من نحن</p>
+        <p>رؤيتنا ورسالتنا</p>
+        <p>الهيكل التنظيمي</p>
+        <p>الخدمات الأكثر طلبًا</p>
+      </div>
+      <div class="footer-column">
+        <h3>الخدمات</h3>
+        <p>الخدمات العقارية</p>
+        <p>التراخيص</p>
+        <p>الشهادات</p>
+        <p>خدمات المياه والكهرباء</p>
+      </div>
+      <div class="footer-column">
+        <h3>روابط مهمة</h3>
+        <p>الأسئلة الشائعة</p>
+        <p>سياسة الخصوصية</p>
+        <p>الشروط والأحكام</p>
+        <p>خريطة الموقع</p>
+      </div>
+      <div class="footer-column">
+        <h3>تواصل</h3>
+        <p>اتصل بنا</p>
+        <p>مركز المساعدة</p>
+        <p>الوظائف</p>
+        <p>الشكاوى والاقتراحات</p>
+      </div>
+    </div>
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+    <div class="copyright">
+      &copy; 2025 جهاز المدينة - جميع الحقوق محفوظة
+    </div>
+  </footer>
+
+  <script>
+    // تحديد الرابط النشط بناءً على الصفحة الحالية
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop();
+
+      // إزالة الكلاس النشط من جميع الروابط
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // إضافة الكلاس النشط للرابط المناسب
+      switch (currentPage) {
+        case 'index.html':
+        case '':
+          document.getElementById('nav-home').classList.add('active');
+          break;
+        case 'news.html':
+          document.getElementById('nav-news').classList.add('active');
+          break;
+        case 'booking.html':
+          document.getElementById('nav-booking').classList.add('active');
+          break;
+        case 'complaint.html':
+          document.getElementById('nav-complaint').classList.add('active');
+          break;
+        case 'about.html':
+          document.getElementById('nav-about').classList.add('active');
+          break;
+      }
+    });
+
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const body = document.body;
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+        if(navMenu.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    });
+}
+  </script>
+</body>
+
+</html>

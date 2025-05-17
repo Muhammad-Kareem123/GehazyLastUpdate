@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>احجز دورك - جهاز المدينة</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts - Arabic -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fix dropdown text color */
+    select,
+    option {
+      color: #333 !important;
+      background-color: white !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">جهاز المدينة</a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+            <li><a href="news.html" id="nav-news">الأخبار</a></li>
+            <li><a href="booking.html" id="nav-booking" class="active">احجز دورك</a></li>
+            <li><a href="complaint.html" id="nav-complaint">تقديم شكوى</a></li>
+            <li><a href="about.html" id="nav-about">حول</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="Login.html"><button class="login-btn">تسجيل دخول</button></a>
+            <a href="Signup.html"><button class="signup-header-btn">إنشاء حساب</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section"
+      style="background: linear-gradient(rgba(10, 77, 146, 0.8), rgba(0, 51, 102, 0.9)), url('Pictures/istockphoto-1166155384-612x612.jpg') no-repeat center center; background-size: cover;">
+      <div class="hero-content">
+        <h1 class="hero-title">احجز دورك</h1>
+        <p class="hero-description">احجز موعدًا لإنجاز معاملاتك بكل سهولة ويسر</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Booking Steps -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">خطوات الحجز</h2>
+          <p class="section-description">اتبع الخطوات التالية لحجز موعد</p>
+        </div>
+
+        <div
+          style="display: flex; justify-content: space-between; position: relative; max-width: 800px; margin: 0 auto 4rem;">
+          <!-- Progress Line -->
+          <div
+            style="position: absolute; top: 40px; right: 50px; left: 50px; height: 4px; background-color: var(--primary-lighter); z-index: 1;">
+          </div>
+
+          <!-- Step 1 -->
+          <div
+            style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; flex: 1;">
+            <div
+              style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--primary); color: white; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 2rem;">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark); text-align: center;">اختيار الخدمة</h3>
+            <p style="color: var(--text-medium); text-align: center; font-size: 0.9rem;">اختر الخدمة التي ترغب في الحصول
+              عليها</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; flex: 1;">
+            <div
+              style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--primary-lighter); color: var(--primary); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 2rem;">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark); text-align: center;">اختيار الموعد</h3>
+            <p style="color: var(--text-medium); text-align: center; font-size: 0.9rem;">حدد التاريخ والوقت المناسب لك
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; flex: 1;">
+            <div
+              style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--primary-lighter); color: var(--primary); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 2rem;">
+              <i class="fas fa-user"></i>
+            </div>
+            <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark); text-align: center;">تعبئة البيانات</h3>
+            <p style="color: var(--text-medium); text-align: center; font-size: 0.9rem;">أدخل بياناتك الشخصية</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; flex: 1;">
+            <div
+              style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--primary-lighter); color: var(--primary); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 2rem;">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark); text-align: center;">تأكيد الحجز</h3>
+            <p style="color: var(--text-medium); text-align: center; font-size: 0.9rem;">استلم رمز الحجز والتأكيد</p>
+          </div>
+        </div>
+
+        <!-- Service Selection Form -->
+        <div
+          style="max-width: 600px; margin: 0 auto; background-color: white; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+          <h3 style="margin-bottom: 1.5rem; color: var(--primary-dark); text-align: center; font-size: 1.5rem;">اختيار
+            الخدمة</h3>
+          <form id="serviceForm">
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">نوع الخدمة *</label>
+              <select id="serviceType"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); color: #333; background-color: white;"
+                required>
+                <option value="" disabled selected>اختر نوع الخدمة</option>
+                <option value="real-estate">الخدمات العقارية</option>
+                <option value="licenses">التراخيص</option>
+                <option value="certificates">الشهادات</option>
+                <option value="water">خدمات المياه</option>
+                <option value="electricity">خدمات الكهرباء</option>
+                <option value="roads">خدمات الطرق</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">الخدمة المطلوبة *</label>
+              <select id="specificService"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); color: #333; background-color: white;"
+                required>
+                <option value="" disabled selected>اختر الخدمة المطلوبة</option>
+                <!-- Options will be populated based on service type selection -->
+              </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">التاريخ المفضل *</label>
+              <input type="date"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); color: #333; background-color: white;"
+                required>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">الوقت المفضل *</label>
+              <select
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); color: #333; background-color: white;"
+                required>
+                <option value="" disabled selected>اختر الوقت المفضل</option>
+                <option value="9:00">9:00 صباحًا</option>
+                <option value="10:00">10:00 صباحًا</option>
+                <option value="11:00">11:00 صباحًا</option>
+                <option value="12:00">12:00 ظهرًا</option>
+                <option value="13:00">1:00 مساءً</option>
+                <option value="14:00">2:00 مساءً</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">الاسم الكامل *</label>
+              <input type="text" placeholder="أدخل اسمك الكامل"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                required>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">رقم الهوية *</label>
+              <input type="text" placeholder="أدخل رقم الهوية"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                required>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">رقم الجوال *</label>
+              <input type="tel" placeholder="أدخل رقم الجوال"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                required>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">البريد الإلكتروني</label>
+              <input type="email" placeholder="أدخل بريدك الإلكتروني"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">ملاحظات إضافية</label>
+              <textarea placeholder="أدخل أي ملاحظات إضافية"
+                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); min-height: 100px; resize: vertical;"></textarea>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: flex-start;">
+                <input type="checkbox" id="terms" style="margin-left: 0.5rem; margin-top: 0.3rem;" required>
+                <label for="terms" style="color: var(--text-medium);">أوافق على الشروط والأحكام وسياسة الخصوصية</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">تأكيد الحجز</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" style="background-color: var(--primary-lighter);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">خدماتنا</h2>
+          <p class="section-description">يمكنك حجز موعد للحصول على أي من الخدمات التالية</p>
+        </div>
+
+        <div class="row">
+          <!-- Service 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-home" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">الخدمات العقارية</h3>
+              <p class="card-text">تسجيل العقارات، نقل الملكية، إصدار رخص البناء والهدم وغيرها من الخدمات العقارية.</p>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-file-alt" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">التراخيص</h3>
+              <p class="card-text">إصدار وتجديد التراخيص التجارية والإعلانية وتراخيص الفعاليات وغيرها.</p>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-certificate" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">الشهادات</h3>
+              <p class="card-text">إصدار شهادات براءة الذمة، شهادات إتمام البناء، شهادات الالتزام وغيرها.</p>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-tint" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">خدمات المياه</h3>
+              <p class="card-text">توصيل المياه، صيانة شبكات المياه، معالجة مشاكل المياه وغيرها.</p>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-bolt" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">خدمات الكهرباء</h3>
+              <p class="card-text">توصيل الكهرباء، صيانة شبكات الكهرباء، معالجة مشاكل الكهرباء وغيرها.</p>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-road" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">خدمات الطرق</h3>
+              <p class="card-text">صيانة الطرق، إنشاء طرق جديدة، معالجة مشاكل الطرق وغيرها.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">الأسئلة الشائعة</h2>
+          <p class="section-description">إجابات على الأسئلة الشائعة حول حجز المواعيد</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+          <!-- FAQ Item 1 -->
+          <div
+            style="margin-bottom: 1.5rem; background-color: white; border-radius: 8px; box-shadow: var(--shadow-sm); overflow: hidden;">
+            <div
+              style="padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary-lighter);">
+              <h3 style="margin: 0; color: var(--primary-dark); font-size: 1.2rem;">كيف يمكنني حجز موعد؟</h3>
+              <i class="fas fa-chevron-down" style="color: var(--primary);"></i>
+            </div>
+            <div style="padding: 1.5rem; border-top: 1px solid var(--border-color);">
+              <p style="margin: 0; color: var(--text-medium);">
+                يمكنك حجز موعد من خلال تعبئة نموذج الحجز في هذه الصفحة. قم بإدخال بياناتك الشخصية واختيار الخدمة
+                المطلوبة والتاريخ والوقت المناسب لك، ثم اضغط على زر "تأكيد الحجز". سيتم إرسال تأكيد الحجز إلى رقم الجوال
+                المسجل.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            style="margin-bottom: 1.5rem; background-color: white; border-radius: 8px; box-shadow: var(--shadow-sm); overflow: hidden;">
+            <div
+              style="padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary-lighter);">
+              <h3 style="margin: 0; color: var(--primary-dark); font-size: 1.2rem;">هل يمكنني إلغاء أو تعديل الموعد؟
+              </h3>
+              <i class="fas fa-chevron-down" style="color: var(--primary);"></i>
+            </div>
+            <div style="padding: 1.5rem; border-top: 1px solid var(--border-color);">
+              <p style="margin: 0; color: var(--text-medium);">
+                نعم، يمكنك إلغاء أو تعديل الموعد قبل 24 ساعة على الأقل من الموعد المحدد. يمكنك القيام بذلك من خلال
+                الاتصال بمركز خدمة العملاء على الرقم 123-456-7890 وتزويدهم برقم الحجز.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            style="margin-bottom: 1.5rem; background-color: white; border-radius: 8px; box-shadow: var(--shadow-sm); overflow: hidden;">
+            <div
+              style="padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary-lighter);">
+              <h3 style="margin: 0; color: var(--primary-dark); font-size: 1.2rem;">ما هي المستندات المطلوبة؟</h3>
+              <i class="fas fa-chevron-down" style="color: var(--primary);"></i>
+            </div>
+            <div style="padding: 1.5rem; border-top: 1px solid var(--border-color);">
+              <p style="margin: 0; color: var(--text-medium);">
+                تختلف المستندات المطلوبة حسب نوع الخدمة. يمكنك الاطلاع على قائمة المستندات المطلوبة لكل خدمة من خلال
+                صفحة الخدمة. يرجى التأكد من إحضار جميع المستندات المطلوبة في الموعد المحدد لتجنب أي تأخير.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div style="background-color: white; border-radius: 8px; box-shadow: var(--shadow-sm); overflow: hidden;">
+            <div
+              style="padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background-color: var(--primary-lighter);">
+              <h3 style="margin: 0; color: var(--primary-dark); font-size: 1.2rem;">ما هي ساعات العمل؟</h3>
+              <i class="fas fa-chevron-down" style="color: var(--primary);"></i>
+            </div>
+            <div style="padding: 1.5rem; border-top: 1px solid var(--border-color);">
+              <p style="margin: 0; color: var(--text-medium);">
+                ساعات العمل من الأحد إلى الخميس من الساعة 8 صباحًا حتى 3 مساءً. يرجى الوصول قبل 15 دقيقة على الأقل من
+                الموعد المحدد.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>عن جهاز المدينة</h3>
+        <p>من نحن</p>
+        <p>رؤيتنا ورسالتنا</p>
+        <p>الهيكل التنظيمي</p>
+        <p>الخدمات الأكثر طلبًا</p>
+      </div>
+      <div class="footer-column">
+        <h3>الخدمات</h3>
+        <p>الخدمات العقارية</p>
+        <p>التراخيص</p>
+        <p>الشهادات</p>
+        <p>خدمات المياه والكهرباء</p>
+      </div>
+      <div class="footer-column">
+        <h3>روابط مهمة</h3>
+        <p>الأسئلة الشائعة</p>
+        <p>سياسة الخصوصية</p>
+        <p>الشروط والأحكام</p>
+        <p>خريطة الموقع</p>
+      </div>
+      <div class="footer-column">
+        <h3>تواصل</h3>
+        <p>اتصل بنا</p>
+        <p>مركز المساعدة</p>
+        <p>الوظائف</p>
+        <p>الشكاوى والاقتراحات</p>
+      </div>
+    </div>
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+    <div class="copyright">
+      &copy; 2025 جهاز المدينة - جميع الحقوق محفوظة
+    </div>
+  </footer>
+
+  <script>
+    // تحديد الرابط النشط بناءً على الصفحة الحالية
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop();
+
+      // إزالة الكلاس النشط من جميع الروابط
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // إضافة الكلاس النشط للرابط المناسب
+      switch (currentPage) {
+        case 'index.html':
+        case '':
+          document.getElementById('nav-home').classList.add('active');
+          break;
+        case 'news.html':
+          document.getElementById('nav-news').classList.add('active');
+          break;
+        case 'booking.html':
+          document.getElementById('nav-booking').classList.add('active');
+          break;
+        case 'complaint.html':
+          document.getElementById('nav-complaint').classList.add('active');
+          break;
+        case 'about.html':
+          document.getElementById('nav-about').classList.add('active');
+          break;
+      }
+    });
+
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const body = document.body;
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+        if(navMenu.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    });
+}
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.section:nth-child(3) .container > div > div');
+    faqItems.forEach(item => {
+      const header = item.querySelector('div:first-child');
+      const content = item.querySelector('div:last-child');
+      const icon = header.querySelector('i');
+
+      // Initially hide all content except the first one
+      if (item !== faqItems[0]) {
+        content.style.display = 'none';
+      } else {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      }
+
+      header.addEventListener('click', function () {
+        if (content.style.display === 'none') {
+          content.style.display = 'block';
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          content.style.display = 'none';
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      });
+    });
+
+    // Populate specific services based on service type selection
+    document.getElementById('serviceType').addEventListener('change', function () {
+      const specificService = document.getElementById('specificService');
+      specificService.innerHTML = '<option value="" disabled selected>اختر الخدمة المطلوبة</option>';
+
+      switch (this.value) {
+        case 'real-estate':
+          addOptions(specificService, [
+            { value: 'property-registration', text: 'تسجيل عقار' },
+            { value: 'property-transfer', text: 'نقل ملكية' },
+            { value: 'building-permit', text: 'رخصة بناء' },
+            { value: 'demolition-permit', text: 'رخصة هدم' }
+          ]);
+          break;
+        case 'licenses':
+          addOptions(specificService, [
+            { value: 'commercial-license', text: 'ترخيص تجاري' },
+            { value: 'advertising-license', text: 'ترخيص إعلاني' },
+            { value: 'event-license', text: 'ترخيص فعالية' }
+          ]);
+          break;
+        case 'certificates':
+          addOptions(specificService, [
+            { value: 'clearance-certificate', text: 'شهادة براءة ذمة' },
+            { value: 'completion-certificate', text: 'شهادة إتمام بناء' },
+            { value: 'compliance-certificate', text: 'شهادة التزام' }
+          ]);
+          break;
+        case 'water':
+          addOptions(specificService, [
+            { value: 'water-connection', text: 'توصيل المياه' },
+            { value: 'water-maintenance', text: 'صيانة شبكات المياه' },
+            { value: 'water-issues', text: 'معالجة مشاكل المياه' }
+          ]);
+          break;
+        case 'electricity':
+          addOptions(specificService, [
+            { value: 'electricity-connection', text: 'توصيل الكهرباء' },
+            { value: 'electricity-maintenance', text: 'صيانة شبكات الكهرباء' },
+            { value: 'electricity-issues', text: 'معالجة مشاكل الكهرباء' }
+          ]);
+          break;
+        case 'roads':
+          addOptions(specificService, [
+            { value: 'road-maintenance', text: 'صيانة الطرق' },
+            { value: 'new-road', text: 'إنشاء طريق جديد' },
+            { value: 'road-issues', text: 'معالجة مشاكل الطرق' }
+          ]);
+          break;
+      }
+    });
+
+    function addOptions(selectElement, options) {
+      options.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option.value;
+        optionElement.textContent = option.text;
+        selectElement.appendChild(optionElement);
+      });
+    }
+
+    // Form submission
+    document.getElementById('serviceForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('تم تقديم طلب الحجز بنجاح! سيتم إرسال رسالة تأكيد إلى رقم الجوال المسجل.');
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>

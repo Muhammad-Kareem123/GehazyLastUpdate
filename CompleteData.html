@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>استكمال البيانات | جهاز المدينة</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts - Arabic -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <div class="auth-header">
+      <a href="index.html">جهاز المدينة</a>
+    </div>
+    <div class="auth-box">
+      <h2>استكمال البيانات</h2>
+      
+      <div class="progress-container">
+        <div class="progress-step completed">1</div>
+        <div class="progress-step active">2</div>
+        <div class="progress-step">3</div>
+      </div>
+      
+      <form action="VerifyAccount.html" id="completeDataForm">
+        <div class="auth-input-row">
+          <div class="auth-input-group">
+            <input type="text" id="nationalId" placeholder="رقم الهوية" required />
+            <i class="fas fa-id-card"></i>
+          </div>
+          <div class="auth-input-group">
+            <input type="tel" id="phone" placeholder="رقم الجوال" required />
+            <i class="fas fa-phone"></i>
+          </div>
+        </div>
+        
+        <div class="auth-input-group">
+          <select id="gender" required>
+            <option value="" disabled selected>الجنس</option>
+            <option value="male">ذكر</option>
+            <option value="female">أنثى</option>
+          </select>
+          <i class="fas fa-venus-mars"></i>
+        </div>
+        
+        <div class="auth-input-group">
+          <input type="date" id="birthdate" required />
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        
+        <div class="auth-input-group">
+          <select id="city" required>
+            <option value="" disabled selected>القاهرة</option>
+            <option value="riyadh">الجيزة</option>
+            <option value="jeddah">الاسكندرية</option>
+            <option value="dammam">الشرقية</option>
+            <option value="makkah">الغربية</option>
+            <option value="madinah">المنوفية</option>
+          </select>
+          <i class="fas fa-city"></i>
+        </div>
+        
+        <div class="auth-input-group">
+          <input type="text" id="address" placeholder="العنوان" required />
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        
+        <button type="submit" class="auth-btn signup-btn">التالي</button>
+      </form>
+    </div>
+    <div class="back-to-home">
+      <a href="index.html"><i class="fas fa-arrow-right"></i> العودة إلى الصفحة الرئيسية</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('completeDataForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nationalId = document.getElementById('nationalId').value;
+      const phone = document.getElementById('phone').value;
+      const gender = document.getElementById('gender').value;
+      const birthdate = document.getElementById('birthdate').value;
+      const city = document.getElementById('city').value;
+      const address = document.getElementById('address').value;
+      
+      // Basic validation
+      if (!nationalId || !phone || !gender || !birthdate || !city || !address) {
+        alert('يرجى ملء جميع الحقول المطلوبة');
+        return;
+      }
+      
+      // National ID validation (10 digits)
+      if (!/^\d{14}$/.test(nationalId)) {
+        alert('يرجى إدخال رقم هوية صحيح مكون من 14 أرقام');
+        return;
+      }
+      
+      // Phone validation (Saudi format)
+      if (!/^(01)\d{11}$/.test(phone)) {
+        alert('يرجى إدخال رقم جوال صحيح يبدأ بـ 01 ويتكون من 11 أرقام');
+        return;
+      }
+      
+      // If validation passes, submit the form
+      this.submit();
+    });
+  </script>
+</body>
+</html>

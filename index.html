@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الرئيسية - جهاز المدينة</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts - Arabic -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">جهاز المدينة</a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" id="nav-home" class="active">الرئيسية</a></li>
+            <li><a href="news.html" id="nav-news">الأخبار</a></li>
+            <li><a href="booking.html" id="nav-booking">احجز دورك</a></li>
+            <li><a href="complaint.html" id="nav-complaint">تقديم شكوى</a></li>
+            <li><a href="about.html" id="nav-about">حول</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="Login.html"><button class="login-btn">تسجيل دخول</button></a>
+            <a href="Signup.html"><button class="signup-header-btn">إنشاء حساب</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">جهاز المدينة في خدمتكم</h1>
+        <p class="hero-description">نسعى لتقديم أفضل الخدمات لسكان المدينة وتسهيل الإجراءات الحكومية</p>
+        <div class="hero-buttons">
+          <a href="booking.html" class="btn"><i class="fas fa-calendar-alt"></i> احجز دورك</a>
+          <a href="complaint.html" class="btn btn-alt"><i class="fas fa-comment-alt"></i> تقديم شكوى</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Services Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">خدماتنا</h2>
+          <p class="section-description">نقدم مجموعة متنوعة من الخدمات لتلبية احتياجات سكان المدينة</p>
+        </div>
+
+        <div class="row">
+          <!-- Service 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-home" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">الخدمات العقارية</h3>
+              <p class="card-text">تسجيل العقارات، نقل الملكية، إصدار رخص البناء والهدم وغيرها من الخدمات العقارية.</p>
+              <div style="margin-top: 1.5rem;">
+                <a href="booking.html" class="btn btn-sm">احجز موعد</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-file-alt" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">التراخيص</h3>
+              <p class="card-text">إصدار وتجديد التراخيص التجارية والإعلانية وتراخيص الفعاليات وغيرها.</p>
+              <div style="margin-top: 1.5rem;">
+                <a href="booking.html" class="btn btn-sm">احجز موعد</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-certificate" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">الشهادات</h3>
+              <p class="card-text">إصدار شهادات براءة الذمة، شهادات إتمام البناء، شهادات الالتزام وغيرها.</p>
+              <div style="margin-top: 1.5rem;">
+                <a href="booking.html" class="btn btn-sm">احجز موعد</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-tint" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">خدمات المياه</h3>
+              <p class="card-text">توصيل المياه، صيانة شبكات المياه، معالجة مشاكل المياه وغيرها.</p>
+              <div style="margin-top: 1.5rem;">
+                <a href="booking.html" class="btn btn-sm">احجز موعد</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-bolt" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">خدمات الكهرباء</h3>
+              <p class="card-text">توصيل الكهرباء، صيانة شبكات الكهرباء، معالجة مشاكل الكهرباء وغيرها.</p>
+              <div style="margin-top: 1.5rem;">
+                <a href="booking.html" class="btn btn-sm">احجز موعد</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-road" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">خدمات الطرق</h3>
+              <p class="card-text">صيانة الطرق، إنشاء طرق جديدة، معالجة مشاكل الطرق وغيرها.</p>
+              <div style="margin-top: 1.5rem;">
+                <a href="booking.html" class="btn btn-sm">احجز موعد</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section" style="background-color: var(--primary-lighter);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">أحدث الأخبار</h2>
+          <p class="section-description">تابع آخر الأخبار والإعلانات الهامة في المدينة</p>
+        </div>
+
+        <div class="row">
+          <!-- News Item 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <img src="istockphoto-1166155384-612x612.jpg" alt="صورة الخبر" class="card-img">
+              <div class="card-body">
+                <span class="badge badge-primary">المياه</span>
+                <h3 class="card-title">انقطاع المياه للصيانة</h3>
+                <p class="card-text">سيتم انقطاع المياه في المنطقة الشرقية غدًا من الساعة 9 صباحًا حتى 2 ظهرًا للصيانة
+                  الدورية.</p>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                  <i class="far fa-calendar-alt"></i> 15 مايو 2025
+                </p>
+                <a href="water_news.html" class="btn btn-sm">قراءة المزيد</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Item 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <img src="electricity.avif" alt="صورة الخبر" class="card-img">
+              <div class="card-body">
+                <span class="badge badge-warning">الكهرباء</span>
+                <h3 class="card-title">صيانة شبكة الكهرباء</h3>
+                <p class="card-text">ستقوم فرق الصيانة بإجراء أعمال تطوير لشبكة الكهرباء في المنطقة الغربية يوم الأحد
+                  القادم.</p>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                  <i class="far fa-calendar-alt"></i> 12 مايو 2025
+                </p>
+                <a href="electric_news.html" class="btn btn-sm">قراءة المزيد</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Item 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card">
+              <img src="1.webp" alt="صورة الخبر" class="card-img">
+              <div class="card-body">
+                <span class="badge badge-success">فعاليات</span>
+                <h3 class="card-title">مهرجان المدينة السنوي</h3>
+                <p class="card-text">يسر جهاز المدينة الإعلان عن انطلاق فعاليات مهرجان المدينة السنوي في الحديقة
+                  المركزية.</p>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem;">
+                  <i class="far fa-calendar-alt"></i> 5 مايو 2025
+                </p>
+                <a href="news.html" class="btn btn-sm">قراءة المزيد</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="news.html" class="btn">عرض جميع الأخبار <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">إحصائيات الجهاز</h2>
+          <p class="section-description">نفخر بخدمة سكان المدينة وتحقيق إنجازات ملموسة</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 2rem;">
+          <!-- Stat 1 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">25,000+</div>
+            <p class="stat-text">معاملة شهرياً</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">95%</div>
+            <p class="stat-text">نسبة رضا المستفيدين</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">15</div>
+            <p class="stat-text">فرع في المدينة</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">500+</div>
+            <p class="stat-text">موظف مؤهل</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">هل تحتاج إلى مساعدة؟</h2>
+        <p class="cta-description">فريقنا جاهز لمساعدتك في أي استفسار أو خدمة تحتاجها. يمكنك حجز موعد أو تقديم شكوى بكل
+          سهولة.</p>
+        <div class="cta-buttons">
+          <a href="booking.html" class="btn" style="background: white; color: var(--primary);"><i
+              class="fas fa-calendar-alt"></i> احجز موعد</a>
+          <a href="complaint.html" class="btn btn-alt"><i class="fas fa-comment-alt"></i> تقديم شكوى</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">تواصل معنا</h2>
+          <p class="section-description">نحن هنا للإجابة على استفساراتك وتقديم المساعدة</p>
+        </div>
+
+        <div class="row">
+          <!-- Contact Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">العنوان</h3>
+              <p class="card-text">شارع الرئيسي، الحصري</p>
+            </div>
+          </div>
+
+          <!-- Contact Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-phone-alt" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">اتصل بنا</h3>
+              <p class="card-text">هاتف: 123-456-7890<br>فاكس: 123-456-7891</p>
+            </div>
+          </div>
+
+          <!-- Contact Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-envelope" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">البريد الإلكتروني</h3>
+              <p class="card-text">gehazi123wep@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div
+          style="margin-top: 3rem; height: 400px; background-color: #eee; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <div style="text-align: center;">
+            <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: var(--primary); margin-bottom: 1rem;"></i>
+            <h3 style="margin-bottom: 0.5rem; color: var(--primary-dark);">خريطة الموقع</h3>
+            <p style="color: var(--text-medium);">سيتم تحميل الخريطة هنا</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>عن جهاز المدينة</h3>
+        <p>من نحن</p>
+        <p>رؤيتنا ورسالتنا</p>
+        <p>الهيكل التنظيمي</p>
+        <p>الخدمات الأكثر طلبًا</p>
+      </div>
+      <div class="footer-column">
+        <h3>الخدمات</h3>
+        <p>الخدمات العقارية</p>
+        <p>التراخيص</p>
+        <p>الشهادات</p>
+        <p>خدمات المياه والكهرباء</p>
+      </div>
+      <div class="footer-column">
+        <h3>روابط مهمة</h3>
+        <p>الأسئلة الشائعة</p>
+        <p>سياسة الخصوصية</p>
+        <p>الشروط والأحكام</p>
+        <p>خريطة الموقع</p>
+      </div>
+      <div class="footer-column">
+        <h3>تواصل</h3>
+        <p>اتصل بنا</p>
+        <p>مركز المساعدة</p>
+        <p>الوظائف</p>
+        <p>الشكاوى والاقتراحات</p>
+      </div>
+    </div>
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+    <div class="copyright">
+      &copy; 2025 جهاز المدينة - جميع الحقوق محفوظة
+    </div>
+  </footer>
+
+  <script>
+    // تحديد الرابط النشط بناءً على الصفحة الحالية
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop();
+
+      // إزالة الكلاس النشط من جميع الروابط
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // إضافة الكلاس النشط للرابط المناسب
+      switch (currentPage) {
+        case 'index.html':
+        case '':
+          document.getElementById('nav-home').classList.add('active');
+          break;
+        case 'news.html':
+          document.getElementById('nav-news').classList.add('active');
+          break;
+        case 'booking.html':
+          document.getElementById('nav-booking').classList.add('active');
+          break;
+        case 'complaint.html':
+          document.getElementById('nav-complaint').classList.add('active');
+          break;
+        case 'about.html':
+          document.getElementById('nav-about').classList.add('active');
+          break;
+      }
+    });
+
+    // Mobile menu toggle
+    // (Handled below with click event and navMenu)
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add animation to statistics
+    const animateStats = () => {
+      const stats = document.querySelectorAll('.stat-number');
+      stats.forEach(stat => {
+        const value = stat.innerText;
+        stat.innerText = '0';
+        let current = 0;
+        const target = parseInt(value.replace(/[^\d]/g, ''));
+        const increment = Math.ceil(target / 100);
+        const duration = 1500;
+        const step = Math.floor(duration / (target / increment));
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current > target) {
+            stat.innerText = value;
+            clearInterval(timer);
+          } else {
+            stat.innerText = current + (value.includes('+') ? '+' : '');
+            if (value.includes('%')) stat.innerText += '%';
+          }
+        }, step);
+      });
+    };
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('statistics-section')) {
+            animateStats();
+          }
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Observe elements for animation
+    document.querySelectorAll('.card, .statistics-section').forEach(el => {
+      observer.observe(el);
+    });
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const body = document.body;
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('open');
+        if (navMenu.classList.contains('open')) {
+          body.style.overflow = 'hidden';
+        } else {
+          body.style.overflow = 'auto';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

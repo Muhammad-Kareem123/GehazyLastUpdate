@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تقديم شكوى - جهاز المدينة</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts - Arabic -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">جهاز المدينة</a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+            <li><a href="news.html" id="nav-news">الأخبار</a></li>
+            <li><a href="booking.html" id="nav-booking">احجز دورك</a></li>
+            <li><a href="complaint.html" id="nav-complaint" class="active">تقديم شكوى</a></li>
+            <li><a href="about.html" id="nav-about">حول</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="Login.html"><button class="login-btn">تسجيل دخول</button></a>
+            <a href="Signup.html"><button class="signup-header-btn">إنشاء حساب</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section"
+      style="background: linear-gradient(rgba(10, 77, 146, 0.8), rgba(0, 51, 102, 0.9)), url('Pictures/photo-1508780709619-79562169bc64.avif') no-repeat center center; background-size: cover;">
+      <div class="hero-content">
+        <h1 class="hero-title">تقديم شكوى</h1>
+        <p class="hero-description">ساعدنا في تحسين خدماتنا من خلال تقديم شكواك أو اقتراحك</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Complaint Form Section -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div style="background-color: white; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
+              <h2 style="margin-bottom: 1.5rem; color: var(--primary-dark);">نموذج الشكوى</h2>
+              <form>
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">الاسم الكامل
+                    *</label>
+                  <input type="text" placeholder="أدخل اسمك الكامل"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                    required>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">رقم الهوية *</label>
+                  <input type="text" placeholder="أدخل رقم الهوية"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                    required>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                  <div style="flex: 1; min-width: 200px;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">رقم الجوال
+                      *</label>
+                    <input type="tel" placeholder="أدخل رقم الجوال"
+                      style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                      required>
+                  </div>
+                  <div style="flex: 1; min-width: 200px;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">البريد
+                      الإلكتروني</label>
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني"
+                      style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">نوع الشكوى *</label>
+                  <select
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                    required>
+                    <option value="" disabled selected>اختر نوع الشكوى</option>
+                    <option value="water">مشكلة في المياه</option>
+                    <option value="electricity">مشكلة في الكهرباء</option>
+                    <option value="roads">مشكلة في الطرق</option>
+                    <option value="sanitation">مشكلة في الصرف الصحي</option>
+                    <option value="garbage">مشكلة في النظافة</option>
+                    <option value="other">أخرى</option>
+                  </select>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">المنطقة *</label>
+                  <select
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                    required>
+                    <option value="" disabled selected>اختر المنطقة</option>
+                    <option value="east">المنطقة الشرقية</option>
+                    <option value="west">المنطقة الغربية</option>
+                    <option value="north">المنطقة الشمالية</option>
+                    <option value="south">المنطقة الجنوبية</option>
+                    <option value="center">المنطقة المركزية</option>
+                  </select>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">العنوان التفصيلي
+                    *</label>
+                  <input type="text" placeholder="أدخل العنوان التفصيلي"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                    required>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">موضوع الشكوى
+                    *</label>
+                  <input type="text" placeholder="أدخل عنوان الشكوى"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);"
+                    required>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">تفاصيل الشكوى
+                    *</label>
+                  <textarea placeholder="أدخل تفاصيل الشكوى"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color); min-height: 150px; resize: vertical;"
+                    required></textarea>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display: block; margin-bottom: 0.5rem; color: var(--text-medium);">إرفاق صور
+                    (اختياري)</label>
+                  <input type="file" multiple accept="image/*"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                  <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-light);">يمكنك إرفاق حتى 3 صور بحجم
+                    أقصى 5 ميجابايت لكل صورة</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <div style="display: flex; align-items: flex-start;">
+                    <input type="checkbox" id="terms" style="margin-left: 0.5rem; margin-top: 0.3rem;" required>
+                    <label for="terms" style="color: var(--text-medium);">أقر بأن جميع المعلومات المقدمة صحيحة وأتحمل
+                      المسؤولية القانونية في حال ثبوت عدم صحتها</label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn">تقديم الشكوى</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div
+              style="background-color: var(--primary-lighter); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+              <h3 style="margin-bottom: 1.5rem; color: var(--primary-dark); font-size: 1.5rem;">تعليمات تقديم الشكوى
+              </h3>
+              <ul style="padding-right: 1.5rem; color: var(--text-medium);">
+                <li style="margin-bottom: 0.8rem;">تأكد من إدخال جميع البيانات المطلوبة بشكل صحيح.</li>
+                <li style="margin-bottom: 0.8rem;">قم بتحديد نوع الشكوى والمنطقة بدقة.</li>
+                <li style="margin-bottom: 0.8rem;">اذكر تفاصيل الشكوى بوضوح وبشكل مختصر.</li>
+                <li style="margin-bottom: 0.8rem;">يمكنك إرفاق صور توضيحية للمشكلة إن وجدت.</li>
+                <li>سيتم التواصل معك خلال 48 ساعة عمل من تقديم الشكوى.</li>
+              </ul>
+            </div>
+
+            <div
+              style="background-color: white; padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm); margin-bottom: 2rem;">
+              <h3 style="margin-bottom: 1.5rem; color: var(--primary-dark); font-size: 1.5rem;">تتبع حالة الشكوى</h3>
+              <p style="margin-bottom: 1.5rem; color: var(--text-medium);">
+                يمكنك تتبع حالة شكواك من خلال إدخال رقم الشكوى ورقم الهوية.
+              </p>
+              <form>
+                <div style="margin-bottom: 1rem;">
+                  <input type="text" placeholder="رقم الشكوى"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                  <input type="text" placeholder="رقم الهوية"
+                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">تتبع الشكوى</button>
+              </form>
+            </div>
+
+            <div style="background-color: var(--primary); padding: 2rem; border-radius: 8px; color: white;">
+              <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">تواصل معنا</h3>
+              <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-phone-alt" style="font-size: 1.2rem;"></i>
+                <span>123-456-7890</span>
+              </div>
+              <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-envelope" style="font-size: 1.2rem;"></i>
+                <span>gehazi123wep@gmail.com</span>
+              </div>
+              <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-map-marker-alt" style="font-size: 1.2rem;"></i>
+                <span>شارع الرئيسي، الحصري</span>
+              </div>
+              <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-clock" style="font-size: 1.2rem;"></i>
+                <span>الأحد - الخميس: 8 صباحًا - 3 مساءً</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section" style="background-color: var(--primary-lighter);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">إحصائيات الشكاوى</h2>
+          <p class="section-description">نسعى دائمًا لتحسين خدماتنا وحل مشاكل المواطنين</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 2rem;">
+          <!-- Stat 1 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">95%</div>
+            <p class="stat-text">نسبة الشكاوى المحلولة</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">24</div>
+            <p class="stat-text">ساعة متوسط وقت الاستجابة</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">5000+</div>
+            <p class="stat-text">شكوى تم حلها شهريًا</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div style="text-align: center; flex: 1; min-width: 200px;">
+            <div class="stat-number">90%</div>
+            <p class="stat-text">نسبة رضا المستفيدين</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Complaints Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">الشكاوى الشائعة</h2>
+          <p class="section-description">تعرف على أكثر الشكاوى شيوعًا وكيفية التعامل معها</p>
+        </div>
+
+        <div class="row">
+          <!-- Complaint Type 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-tint" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">مشاكل المياه</h3>
+              <p class="card-text">انقطاع المياه، ضعف ضغط المياه، تسرب المياه، تلوث المياه.</p>
+              <a href="#" class="btn btn-sm" style="margin-top: 1rem;">كيفية التعامل</a>
+            </div>
+          </div>
+
+          <!-- Complaint Type 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-bolt" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">مشاكل الكهرباء</h3>
+              <p class="card-text">انقطاع الكهرباء، ضعف التيار الكهربائي، مشاكل في العدادات.</p>
+              <a href="#" class="btn btn-sm" style="margin-top: 1rem;">كيفية التعامل</a>
+            </div>
+          </div>
+
+          <!-- Complaint Type 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-road" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">مشاكل الطرق</h3>
+              <p class="card-text">حفر في الطرق، تشققات في الأسفلت، مشاكل في الإنارة، مشاكل في التصريف.</p>
+              <a href="#" class="btn btn-sm" style="margin-top: 1rem;">كيفية التعامل</a>
+            </div>
+          </div>
+
+          <!-- Complaint Type 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-trash" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">مشاكل النظافة</h3>
+              <p class="card-text">تراكم النفايات، عدم جمع القمامة، انتشار الحشرات والقوارض.</p>
+              <a href="#" class="btn btn-sm" style="margin-top: 1rem;">كيفية التعامل</a>
+            </div>
+          </div>
+
+          <!-- Complaint Type 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-water" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">مشاكل الصرف الصحي</h3>
+              <p class="card-text">انسداد المجاري، طفح مياه الصرف الصحي، روائح كريهة.</p>
+              <a href="#" class="btn btn-sm" style="margin-top: 1rem;">كيفية التعامل</a>
+            </div>
+          </div>
+
+          <!-- Complaint Type 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card" style="text-align: center; padding: 2rem; margin-top: 2rem;">
+              <div style="margin-bottom: 1.5rem;">
+                <i class="fas fa-building" style="font-size: 3rem; color: var(--primary);"></i>
+              </div>
+              <h3 class="card-title">مشاكل البناء</h3>
+              <p class="card-text">بناء مخالف، تصدعات في المباني، مشاكل في التراخيص.</p>
+              <a href="#" class="btn btn-sm" style="margin-top: 1rem;">كيفية التعامل</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>عن جهاز المدينة</h3>
+        <p>من نحن</p>
+        <p>رؤيتنا ورسالتنا</p>
+        <p>الهيكل التنظيمي</p>
+        <p>الخدمات الأكثر طلبًا</p>
+      </div>
+      <div class="footer-column">
+        <h3>الخدمات</h3>
+        <p>الخدمات العقارية</p>
+        <p>التراخيص</p>
+        <p>الشهادات</p>
+        <p>خدمات المياه والكهرباء</p>
+      </div>
+      <div class="footer-column">
+        <h3>روابط مهمة</h3>
+        <p>الأسئلة الشائعة</p>
+        <p>سياسة الخصوصية</p>
+        <p>الشروط والأحكام</p>
+        <p>خريطة الموقع</p>
+      </div>
+      <div class="footer-column">
+        <h3>تواصل</h3>
+        <p>اتصل بنا</p>
+        <p>مركز المساعدة</p>
+        <p>الوظائف</p>
+        <p>الشكاوى والاقتراحات</p>
+      </div>
+    </div>
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+    <div class="copyright">
+      &copy; 2025 جهاز المدينة - جميع الحقوق محفوظة
+    </div>
+  </footer>
+
+  <script>
+    // تحديد الرابط النشط بناءً على الصفحة الحالية
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentPage = window.location.pathname.split('/').pop();
+
+      // إزالة الكلاس النشط من جميع الروابط
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // إضافة الكلاس النشط للرابط المناسب
+      switch (currentPage) {
+        case 'index.html':
+        case '':
+          document.getElementById('nav-home').classList.add('active');
+          break;
+        case 'news.html':
+          document.getElementById('nav-news').classList.add('active');
+          break;
+        case 'booking.html':
+          document.getElementById('nav-booking').classList.add('active');
+          break;
+        case 'complaint.html':
+          document.getElementById('nav-complaint').classList.add('active');
+          break;
+        case 'about.html':
+          document.getElementById('nav-about').classList.add('active');
+          break;
+      }
+    });
+
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const body = document.body;
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+        if(navMenu.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    });
+}
+
+    // Animate statistics
+    const animateStats = () => {
+      const stats = document.querySelectorAll('.stat-number');
+      stats.forEach(stat => {
+        const value = stat.innerText;
+        stat.innerText = '0';
+        let current = 0;
+        const target = parseInt(value.replace(/[^\d]/g, ''));
+        const increment = Math.ceil(target / 100);
+        const duration = 1500;
+        const step = Math.floor(duration / (target / increment));
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current > target) {
+            stat.innerText = value;
+            clearInterval(timer);
+          } else {
+            stat.innerText = current + (value.includes('+') ? '+' : '');
+            if (value.includes('%')) stat.innerText += '%';
+          }
+        }, step);
+      });
+    };
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('section:nth-child(2)')) {
+            animateStats();
+          }
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    // Observe elements for animation
+    document.querySelectorAll('.section:nth-child(2)').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+
+</html>
