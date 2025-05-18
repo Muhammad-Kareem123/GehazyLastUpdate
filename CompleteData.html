@@ -108,6 +108,90 @@
       // If validation passes, submit the form
       this.submit();
     });
+    document.addEventListener('DOMContentLoaded', function() {
+  // Elements
+  const authButtons = document.getElementById('auth-buttons');
+  const userProfile = document.getElementById('user-profile');
+  const avatarContainer = document.getElementById('avatar-container');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  const userInitials = document.getElementById('user-initials');
+  const userName = document.getElementById('user-name');
+  const userEmail = document.getElementById('user-email');
+  const logoutBtn = document.getElementById('logout-btn');
+  
+  // Check if user is logged in
+  function checkAuthStatus() {
+    const userData = localStorage.getItem('userData');
+    
+    if (userData) {
+      const user = JSON.parse(userData);
+      
+      if (user.isLoggedIn) {
+        // User is logged in, show profile avatar
+        authButtons.style.display = 'none';
+        userProfile.style.display = 'block';
+        
+        // Set user data
+        if (user.name) {
+          // Get initials from name
+          const nameParts = user.name.split(' ');
+          let initials = '';
+          
+          if (nameParts.length >= 2) {
+            initials = nameParts[0].charAt(0) + nameParts[1].charAt(0);
+          } else {
+            initials = user.name.charAt(0);
+          }
+          
+          userInitials.textContent = initials.toUpperCase();
+          userName.textContent = user.name;
+        }
+        
+        if (user.email) {
+          userEmail.textContent = user.email;
+        }
+      } else {
+        // User is not logged in, show auth buttons
+        authButtons.style.display = 'flex';
+        userProfile.style.display = 'none';
+      }
+    } else {
+      // No user data found, show auth buttons
+      authButtons.style.display = 'flex';
+      userProfile.style.display = 'none';
+    }
+  }
+  
+  // Toggle dropdown menu
+  if (avatarContainer) {
+    avatarContainer.addEventListener('click', function() {
+      dropdownMenu.classList.toggle('show-dropdown');
+    });
+  }
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!avatarContainer.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.remove('show-dropdown');
+    }
+  });
+  
+  // Logout functionality
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Clear user data from localStorage
+      localStorage.removeItem('userData');
+      
+      // Redirect to home page
+      window.location.href = 'index.html';
+    });
+  }
+  
+  // Check auth status on page load
+  checkAuthStatus();
+});
   </script>
 </body>
 </html>
