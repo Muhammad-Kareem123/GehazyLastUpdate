@@ -17,62 +17,62 @@
 
 <body>
   <!-- Header -->
- <!-- Header -->
-<header class="header">
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="logo">
-        <a href="index.html">جهاز المدينة</a>
-      </div>
-      <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="nav-menu" id="nav-menu">
-        <ul class="nav-links">
-          <li><a href="index.html" id="nav-home" class="active">الرئيسية</a></li>
-          <li><a href="news.html" id="nav-news">الأخبار</a></li>
-          <li><a href="booking.html" id="nav-booking">احجز دورك</a></li>
-          <li><a href="complaint.html" id="nav-complaint">تقديم شكوى</a></li>
-          <li><a href="about.html" id="nav-about">حول</a></li>
-        </ul>
-        <div class="auth-buttons" id="auth-buttons">
-          <a href="Login.html"><button class="login-btn">تسجيل دخول</button></a>
-          <a href="Signup.html"><button class="signup-header-btn">إنشاء حساب</button></a>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <a href="index.html">جهاز المدينة</a>
         </div>
-        
-        <!-- User profile container - initially hidden -->
-        <div class="user-profile" id="user-profile" style="display: none;">
-          <div class="avatar-container" id="avatar-container">
-            <div class="avatar">
-              <span id="user-initials">م</span>
-            </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" id="nav-home" class="active">الرئيسية</a></li>
+            <li><a href="news.html" id="nav-news">الأخبار</a></li>
+            <li><a href="booking.html" id="nav-booking">احجز دورك</a></li>
+            <li><a href="complaint.html" id="nav-complaint">تقديم شكوى</a></li>
+            <li><a href="about.html" id="nav-about">حول</a></li>
+          </ul>
+          <div class="auth-buttons" id="auth-buttons">
+            <a href="Login.html"><button class="login-btn">تسجيل دخول</button></a>
+            <a href="Signup.html"><button class="signup-header-btn">إنشاء حساب</button></a>
           </div>
-          <!-- Dropdown menu - initially hidden -->
-          <div class="dropdown-menu" id="dropdown-menu">
-            <div class="dropdown-header">
-              <span id="user-name">اسم المستخدم</span>
-              <span id="user-email" class="user-email">example@email.com</span>
-            </div>
-            <div class="dropdown-divider"></div>
-        
-            <a href="#" class="dropdown-item" id="logout-btn">
-              <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
 
-    <!-- Hero Section -->
-    <div class="hero-section"
-      style="background: linear-gradient(rgba(10, 77, 146, 0.8), rgba(0, 51, 102, 0.9)), url('Pictures/electricity.avif') no-repeat center center; background-size: cover;">
-      <div class="hero-content">
-        <h1 class="hero-title">أخبار وإعلانات جهاز المدينة</h1>
-        <p class="hero-description">تابع آخر الأخبار والإعلانات الهامة في المدينة</p>
+          <!-- User profile container - initially hidden -->
+          <div class="user-profile" id="user-profile" style="display: none;">
+            <div class="avatar-container" id="avatar-container">
+              <div class="avatar">
+                <span id="user-initials">م</span>
+              </div>
+            </div>
+            <!-- Dropdown menu - initially hidden -->
+            <div class="dropdown-menu" id="dropdown-menu">
+              <div class="dropdown-header">
+                <span id="user-name">اسم المستخدم</span>
+                <span id="user-email" class="user-email">example@email.com</span>
+              </div>
+              <div class="dropdown-divider"></div>
+
+              <a href="#" class="dropdown-item" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-section"
+    style="background: linear-gradient(rgba(10, 77, 146, 0.8), rgba(0, 51, 102, 0.9)), url('Pictures/electricity.avif') no-repeat center center; background-size: cover;">
+    <div class="hero-content">
+      <h1 class="hero-title">أخبار وإعلانات جهاز المدينة</h1>
+      <p class="hero-description">تابع آخر الأخبار والإعلانات الهامة في المدينة</p>
     </div>
+  </div>
   </header>
 
   <!-- Main Content -->
@@ -86,7 +86,7 @@
           </form>
           <form action="water_news.html">
             <button class="btn btn-sm"
-              style="background-color: rgba(10, 77, 146, 0.1); background-color: var(--primary);">المياه</button>
+              style="background-color: rgba(10, 77, 146, 0.1); color: var(--primary);">المياه</button>
           </form>
           <form action="electric_news.html">
             <button class="btn btn-sm"
@@ -103,6 +103,10 @@
           <form action="Ads.html">
             <button class="btn btn-sm"
               style="background-color: rgba(10, 77, 146, 0.1); color: var(--primary);">إعلانات</button>
+          </form>
+          <form action="Places.html">
+            <button class="btn btn-sm"
+              style="background-color: rgba(10, 77, 146, 0.1); background-color: var(--primary);">أماكن</button>
           </form>
         </div>
 
@@ -133,32 +137,33 @@
           <div class="col-12" style="margin-bottom: 3rem;">
             <div class="card" style="display: flex; flex-direction: column; overflow: hidden;">
               <div style="position: relative;">
-                <img src="GoodWater.png" alt="صورة الخبر الرئيسي"
+                <img src="pexels-arjunn-la-1561931-19055650.jpg" alt="صورة الخبر الرئيسي"
                   style="width: 100%; height: 400px; object-fit: cover;">
                 <span class="badge badge-success"
-                  style="position: absolute; top: 20px; right: 20px; font-size: 1rem; padding: 0.5rem 1rem;">المياه</span>
+                  style="position: absolute; top: 20px; right: 20px; font-size: 1rem; padding: 0.5rem 1rem;">أماكن</span>
               </div>
               <div class="card-body" style="padding: 2rem;">
-                <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--primary-dark);">
-                  تحسين جودة المياة
-                </h2>
+                <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--primary-dark);">افتاح كافية جديد</h2>
                 <p style="color: var(--text-light); font-size: 1rem; margin-bottom: 1.5rem;">
-                  <i class="far fa-calendar-alt"></i> 5 مايو 2025 &nbsp;&nbsp;
-                  <i class="far fa-user"></i> إدارة الاعلانات &nbsp;&nbsp;
+                  <i class="far fa-calendar-alt"></i> 15 مايو 2025 &nbsp;&nbsp;
+                  <i class="far fa-user"></i> إدارة المحلات &nbsp;&nbsp;
                   <i class="far fa-eye"></i> 1250 مشاهدة
                 </p>
                 <p style="margin-bottom: 1.5rem; color: var(--text-medium); line-height: 1.8;">
-                  في إطار الجهود المستمرة للحفاظ على البيئة وتعزيز صحة المواطنين، أعلنت الجهات المختصة عن إطلاق مجموعة
-                  من المشاريع الجديدة تهدف إلى تحسين جودة المياه في مختلف المناطق. وتشمل هذه المشاريع تحديث أنظمة تنقية
-                  المياه، وتوسيع شبكات المراقبة، واستخدام تقنيات متطورة لرصد الملوثات ومعالجتها.
 
-                  وصرّح مسؤول في وزارة المياه أن هذه المبادرات تأتي تماشيًا مع أهداف التنمية المستدامة، خصوصًا الهدف
-                  السادس المتعلق بضمان توفير مياه نظيفة وآمنة للجميع. وأكد أن الخطوات المتخذة ستسهم في تقليل نسبة
-                  التلوث، وتحسين طعم وجودة المياه التي تصل إلى المنازل والمؤسسات.
+                  شهدت المدينة مؤخرًا افتتاح كافيه جديد تحت اسم "قهوة وزمان"، والذي يعد بإضفاء نكهة مميزة على تجربة
+                  القهوة والمشروبات الساخنة، وسط أجواء تجمع بين الحداثة واللمسات الكلاسيكية.
 
-                  ويُتوقع أن تؤدي هذه التحسينات إلى تعزيز ثقة المواطنين بمصادر المياه العامة، وتقليل الاعتماد على المياه
-                  المعبأة، إلى جانب الآثار الإيجابية على الصحة العامة والبيئة.
+                  ويتميز الكافيه بتصميمه الأنيق وموقعه الحيوي وسط المدينة، بالإضافة إلى قائمة متنوعة تضم أنواعًا مختلفة
+                  من القهوة المختصة، والمشروبات الباردة، والحلويات المنزلية. كما يوفر الكافيه جلسات داخلية مريحة وأخرى
+                  خارجية لمحبي الهواء الطلق.
 
+                  وخلال حفل الافتتاح، أعرب الزوار عن إعجابهم بجودة المشروبات، وحفاوة الاستقبال، والديكور المميز الذي
+                  يضفي شعورًا بالدفء والراحة. وقال صاحب الكافيه: "هدفنا أن يكون هذا المكان ملتقى لكل من يبحث عن لحظات
+                  هادئة، ونكهة مميزة، وخدمة استثنائية."
+
+                  من المتوقع أن يصبح "قهوة وزمان" وجهة مفضلة لمحبي القهوة والمذاق الرفيع، مع خطط مستقبلية لتنظيم فعاليات
+                  ثقافية وأمسيات فنية داخل الكافيه.
                 </p>
                 <p style="margin-bottom: 1.5rem; color: var(--text-medium); line-height: 1.8;">
 
@@ -188,6 +193,7 @@
             </div>
           </div>
 
+
           <!-- News Item 1 -->
           <div class="col-lg-4 col-md-6">
             <div class="card">
@@ -200,7 +206,7 @@
                 </p>
                 <p class="card-text">سيتم انقطاع المياه في المنطقة الشرقية غدًا من الساعة 9 صباحًا حتى 2 ظهرًا للصيانة
                   الدورية.</p>
-                <a href="#" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
+                <a href="water_news.html" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
               </div>
             </div>
           </div>
@@ -217,7 +223,7 @@
                 </p>
                 <p class="card-text">ستقوم فرق الصيانة بإجراء أعمال تطوير لشبكة الكهرباء في المنطقة الغربية يوم الأحد
                   القادم.</p>
-                <a href="#" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
+                <a href="electric_news.html" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
               </div>
             </div>
           </div>
@@ -234,7 +240,7 @@
                 </p>
                 <p class="card-text">يعلن جهاز المدينة عن توفر عدد من الوظائف الشاغرة في مختلف التخصصات. آخر موعد
                   للتقديم 30 مايو.</p>
-                <a href="#" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
+                <a href="Ads.html" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
               </div>
             </div>
           </div>
@@ -251,7 +257,7 @@
                 </p>
                 <p class="card-text">سيتم إغلاق الطريق الدائري الشرقي مؤقتًا لمدة 3 أيام بدءًا من يوم الخميس القادم
                   لأعمال الصيانة.</p>
-                <a href="#" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
+                <a href="Roads.html" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
               </div>
             </div>
           </div>
@@ -268,7 +274,7 @@
                 </p>
                 <p class="card-text">أعلن جهاز المدينة عن الانتهاء من مشروع تحسين جودة المياه في المنطقة الجنوبية من
                   المدينة.</p>
-                <a href="#" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
+                <a href="waterImprovement.html" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
               </div>
             </div>
           </div>
@@ -285,7 +291,7 @@
                 </p>
                 <p class="card-text">ينظم جهاز المدينة ورشة عمل حول ترشيد استهلاك الكهرباء يوم الثلاثاء القادم في المركز
                   الثقافي.</p>
-                <a href="#" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
+                <a href="Activities.html" class="btn btn-sm" style="margin-top: 1rem;">قراءة المزيد</a>
               </div>
             </div>
           </div>
@@ -406,21 +412,21 @@
       }
     });
 
-// Mobile menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-const body = document.body;
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const body = document.body;
 
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', function() {
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function () {
         navMenu.classList.toggle('open');
-        if(navMenu.classList.contains('open')) {
-            body.style.overflow = 'hidden';
+        if (navMenu.classList.contains('open')) {
+          body.style.overflow = 'hidden';
         } else {
-            body.style.overflow = 'auto';
+          body.style.overflow = 'auto';
         }
-    });
-}
+      });
+    }
 
     // Filter buttons
     const filterButtons = document.querySelectorAll('.btn-sm');
@@ -436,90 +442,90 @@ if (menuToggle && navMenu) {
         this.classList.add('active-filter');
       });
     });
-    document.addEventListener('DOMContentLoaded', function() {
-  // Elements
-  const authButtons = document.getElementById('auth-buttons');
-  const userProfile = document.getElementById('user-profile');
-  const avatarContainer = document.getElementById('avatar-container');
-  const dropdownMenu = document.getElementById('dropdown-menu');
-  const userInitials = document.getElementById('user-initials');
-  const userName = document.getElementById('user-name');
-  const userEmail = document.getElementById('user-email');
-  const logoutBtn = document.getElementById('logout-btn');
-  
-  // Check if user is logged in
-  function checkAuthStatus() {
-    const userData = localStorage.getItem('userData');
-    
-    if (userData) {
-      const user = JSON.parse(userData);
-      
-      if (user.isLoggedIn) {
-        // User is logged in, show profile avatar
-        authButtons.style.display = 'none';
-        userProfile.style.display = 'block';
-        
-        // Set user data
-        if (user.name) {
-          // Get initials from name
-          const nameParts = user.name.split(' ');
-          let initials = '';
-          
-          if (nameParts.length >= 2) {
-            initials = nameParts[0].charAt(0) + nameParts[1].charAt(0);
+    document.addEventListener('DOMContentLoaded', function () {
+      // Elements
+      const authButtons = document.getElementById('auth-buttons');
+      const userProfile = document.getElementById('user-profile');
+      const avatarContainer = document.getElementById('avatar-container');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+      const userInitials = document.getElementById('user-initials');
+      const userName = document.getElementById('user-name');
+      const userEmail = document.getElementById('user-email');
+      const logoutBtn = document.getElementById('logout-btn');
+
+      // Check if user is logged in
+      function checkAuthStatus() {
+        const userData = localStorage.getItem('userData');
+
+        if (userData) {
+          const user = JSON.parse(userData);
+
+          if (user.isLoggedIn) {
+            // User is logged in, show profile avatar
+            authButtons.style.display = 'none';
+            userProfile.style.display = 'block';
+
+            // Set user data
+            if (user.name) {
+              // Get initials from name
+              const nameParts = user.name.split(' ');
+              let initials = '';
+
+              if (nameParts.length >= 2) {
+                initials = nameParts[0].charAt(0) + nameParts[1].charAt(0);
+              } else {
+                initials = user.name.charAt(0);
+              }
+
+              userInitials.textContent = initials.toUpperCase();
+              userName.textContent = user.name;
+            }
+
+            if (user.email) {
+              userEmail.textContent = user.email;
+            }
           } else {
-            initials = user.name.charAt(0);
+            // User is not logged in, show auth buttons
+            authButtons.style.display = 'flex';
+            userProfile.style.display = 'none';
           }
-          
-          userInitials.textContent = initials.toUpperCase();
-          userName.textContent = user.name;
+        } else {
+          // No user data found, show auth buttons
+          authButtons.style.display = 'flex';
+          userProfile.style.display = 'none';
         }
-        
-        if (user.email) {
-          userEmail.textContent = user.email;
-        }
-      } else {
-        // User is not logged in, show auth buttons
-        authButtons.style.display = 'flex';
-        userProfile.style.display = 'none';
       }
-    } else {
-      // No user data found, show auth buttons
-      authButtons.style.display = 'flex';
-      userProfile.style.display = 'none';
-    }
-  }
-  
-  // Toggle dropdown menu
-  if (avatarContainer) {
-    avatarContainer.addEventListener('click', function() {
-      dropdownMenu.classList.toggle('show-dropdown');
+
+      // Toggle dropdown menu
+      if (avatarContainer) {
+        avatarContainer.addEventListener('click', function () {
+          dropdownMenu.classList.toggle('show-dropdown');
+        });
+      }
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function (event) {
+        if (!avatarContainer.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.remove('show-dropdown');
+        }
+      });
+
+      // Logout functionality
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Clear user data from localStorage
+          localStorage.removeItem('userData');
+
+          // Redirect to home page
+          window.location.href = 'index.html';
+        });
+      }
+
+      // Check auth status on page load
+      checkAuthStatus();
     });
-  }
-  
-  // Close dropdown when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!avatarContainer.contains(event.target) && !dropdownMenu.contains(event.target)) {
-      dropdownMenu.classList.remove('show-dropdown');
-    }
-  });
-  
-  // Logout functionality
-  if (logoutBtn) {
-    logoutBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Clear user data from localStorage
-      localStorage.removeItem('userData');
-      
-      // Redirect to home page
-      window.location.href = 'index.html';
-    });
-  }
-  
-  // Check auth status on page load
-  checkAuthStatus();
-});
   </script>
 </body>
 
