@@ -53,43 +53,48 @@
   </div>
 
   <script>
-   document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  
-  // Basic validation
-  if (!email || !password) {
-    alert('يرجى ملء جميع الحقول المطلوبة');
-    return;
-  }
-  
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert('يرجى إدخال بريد إلكتروني صحيح');
-    return;
-  }
-  
-  // Password validation (minimum 6 characters)
-  if (password.length < 6) {
-    alert('يجب أن تتكون كلمة المرور من 6 أحرف على الأقل');
-    return;
-  }
-  
-  // Store user data in localStorage
-  const userData = {
-    email: email,
-    name: email.split('@')[0], // Using part of email as name for demo
-    isLoggedIn: true
-  };
-  
-  localStorage.setItem('userData', JSON.stringify(userData));
-  
-  // If validation passes, submit the form
-  window.location.href = 'index.html';
-});
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      // Basic validation
+      if (!email || !password) {
+        alert('يرجى ملء جميع الحقول المطلوبة');
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('يرجى إدخال بريد إلكتروني صحيح');
+        return;
+      }
+      
+      // Password validation (minimum 6 characters)
+      if (password.length < 6) {
+        alert('يجب أن تتكون كلمة المرور من 6 أحرف على الأقل');
+        return;
+      }
+      
+      // If validation passes, submit the form
+      this.submit();
+    });
+    
+    // Toggle password visibility
+    document.querySelector('.fa-lock').addEventListener('click', function() {
+      const passwordInput = document.getElementById('password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        this.classList.remove('fa-lock');
+        this.classList.add('fa-eye-slash');
+      } else {
+        passwordInput.type = 'password';
+        this.classList.remove('fa-eye-slash');
+        this.classList.add('fa-lock');
+      }
+    });
   </script>
 </body>
 </html>
