@@ -36,9 +36,9 @@
       </button>
       <div class="nav-menu" id="nav-menu">
         <ul class="nav-links">
-          <li><a href="index.html" id="nav-home" class="active">الرئيسية</a></li>
+          <li><a href="index.html" id="nav-home">الرئيسية</a></li>
           <li><a href="news.html" id="nav-news">الأخبار</a></li>
-          <li><a href="booking.html" id="nav-booking">احجز دورك</a></li>
+          <li><a href="booking.html" id="nav-booking" class="active">احجز دورك</a></li>
           <li><a href="complaint.html" id="nav-complaint">تقديم شكوى</a></li>
           <li><a href="about.html" id="nav-about">حول</a></li>
         </ul>
@@ -74,7 +74,7 @@
 
     <!-- Hero Section -->
     <div class="hero-section"
-      style="background: linear-gradient(rgba(10, 77, 146, 0.8), rgba(0, 51, 102, 0.9)), url('Pictures/istockphoto-1166155384-612x612.jpg') no-repeat center center; background-size: cover;">
+      style="background: linear-gradient(rgba(10, 78, 146, 0.468), rgba(0, 51, 102, 0.392)), url('images\ \(1\).jpeg') no-repeat center center; background-size: cover;">
       <div class="hero-content">
         <h1 class="hero-title">احجز دورك</h1>
         <p class="hero-description">احجز موعدًا لإنجاز معاملاتك بكل سهولة ويسر</p>
@@ -474,23 +474,41 @@
           document.getElementById('nav-about').classList.add('active');
           break;
       }
-    });
 
-// Mobile menu toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-const body = document.body;
-
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('open');
-        if(navMenu.classList.contains('open')) {
-            body.style.overflow = 'hidden';
-        } else {
-            body.style.overflow = 'auto';
+      // Get service type from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      
+      if (serviceParam) {
+        const serviceTypeSelect = document.getElementById('serviceType');
+        
+        // Set the selected service type
+        if (serviceTypeSelect) {
+          serviceTypeSelect.value = serviceParam;
+          
+          // Trigger the change event to populate the specific service dropdown
+          const event = new Event('change');
+          serviceTypeSelect.dispatchEvent(event);
         }
+      }
     });
-}
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const body = document.body;
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+            if(navMenu.classList.contains('open')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        });
+    }
+    
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.section:nth-child(3) .container > div > div');
     faqItems.forEach(item => {
@@ -586,90 +604,91 @@ if (menuToggle && navMenu) {
       alert('تم تقديم طلب الحجز بنجاح! سيتم إرسال رسالة تأكيد إلى رقم الجوال المسجل.');
       this.reset();
     });
-    document.addEventListener('DOMContentLoaded', function() {
-  // Elements
-  const authButtons = document.getElementById('auth-buttons');
-  const userProfile = document.getElementById('user-profile');
-  const avatarContainer = document.getElementById('avatar-container');
-  const dropdownMenu = document.getElementById('dropdown-menu');
-  const userInitials = document.getElementById('user-initials');
-  const userName = document.getElementById('user-name');
-  const userEmail = document.getElementById('user-email');
-  const logoutBtn = document.getElementById('logout-btn');
-  
-  // Check if user is logged in
-  function checkAuthStatus() {
-    const userData = localStorage.getItem('userData');
     
-    if (userData) {
-      const user = JSON.parse(userData);
+    document.addEventListener('DOMContentLoaded', function() {
+      // Elements
+      const authButtons = document.getElementById('auth-buttons');
+      const userProfile = document.getElementById('user-profile');
+      const avatarContainer = document.getElementById('avatar-container');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+      const userInitials = document.getElementById('user-initials');
+      const userName = document.getElementById('user-name');
+      const userEmail = document.getElementById('user-email');
+      const logoutBtn = document.getElementById('logout-btn');
       
-      if (user.isLoggedIn) {
-        // User is logged in, show profile avatar
-        authButtons.style.display = 'none';
-        userProfile.style.display = 'block';
+      // Check if user is logged in
+      function checkAuthStatus() {
+        const userData = localStorage.getItem('userData');
         
-        // Set user data
-        if (user.name) {
-          // Get initials from name
-          const nameParts = user.name.split(' ');
-          let initials = '';
+        if (userData) {
+          const user = JSON.parse(userData);
           
-          if (nameParts.length >= 2) {
-            initials = nameParts[0].charAt(0) + nameParts[1].charAt(0);
+          if (user.isLoggedIn) {
+            // User is logged in, show profile avatar
+            authButtons.style.display = 'none';
+            userProfile.style.display = 'block';
+            
+            // Set user data
+            if (user.name) {
+              // Get initials from name
+              const nameParts = user.name.split(' ');
+              let initials = '';
+              
+              if (nameParts.length >= 2) {
+                initials = nameParts[0].charAt(0) + nameParts[1].charAt(0);
+              } else {
+                initials = user.name.charAt(0);
+              }
+              
+              userInitials.textContent = initials.toUpperCase();
+              userName.textContent = user.name;
+            }
+            
+            if (user.email) {
+              userEmail.textContent = user.email;
+            }
           } else {
-            initials = user.name.charAt(0);
+            // User is not logged in, show auth buttons
+            authButtons.style.display = 'flex';
+            userProfile.style.display = 'none';
           }
-          
-          userInitials.textContent = initials.toUpperCase();
-          userName.textContent = user.name;
+        } else {
+          // No user data found, show auth buttons
+          authButtons.style.display = 'flex';
+          userProfile.style.display = 'none';
         }
-        
-        if (user.email) {
-          userEmail.textContent = user.email;
-        }
-      } else {
-        // User is not logged in, show auth buttons
-        authButtons.style.display = 'flex';
-        userProfile.style.display = 'none';
       }
-    } else {
-      // No user data found, show auth buttons
-      authButtons.style.display = 'flex';
-      userProfile.style.display = 'none';
-    }
-  }
-  
-  // Toggle dropdown menu
-  if (avatarContainer) {
-    avatarContainer.addEventListener('click', function() {
-      dropdownMenu.classList.toggle('show-dropdown');
-    });
-  }
-  
-  // Close dropdown when clicking outside
-  document.addEventListener('click', function(event) {
-    if (!avatarContainer.contains(event.target) && !dropdownMenu.contains(event.target)) {
-      dropdownMenu.classList.remove('show-dropdown');
-    }
-  });
-  
-  // Logout functionality
-  if (logoutBtn) {
-    logoutBtn.addEventListener('click', function(e) {
-      e.preventDefault();
       
-      // Clear user data from localStorage
-      localStorage.removeItem('userData');
+      // Toggle dropdown menu
+      if (avatarContainer) {
+        avatarContainer.addEventListener('click', function() {
+          dropdownMenu.classList.toggle('show-dropdown');
+        });
+      }
       
-      // Redirect to home page
-      window.location.href = 'index.html';
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+        if (avatarContainer && !avatarContainer.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.remove('show-dropdown');
+        }
+      });
+      
+      // Logout functionality
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Clear user data from localStorage
+          localStorage.removeItem('userData');
+          
+          // Redirect to home page
+          window.location.href = 'index.html';
+        });
+      }
+      
+      // Check auth status on page load
+      checkAuthStatus();
     });
-  }
-  
-  // Check auth status on page load
-  checkAuthStatus();
-});
   </script>
 </body>
 
