@@ -990,26 +990,8 @@ body.auth-page::before {
 .auth-links a:hover:after {
   width: 100%;
 }
-main .card:hover{
-  background-color: rgb(63, 19, 151);
-  color: white;
-  cursor: pointer;
-}
-main .card:hover .card-title {
-  color: var(--primary-lighter);
-}
-main .card:hover .card-text {
-  color: var(--primary-lighter);
-}
-.card:hover .Icon i{
-  color: var(--white) !important;
-}
-.card:hover .card-body p {
-  color: var(--white) !important;
-}
-.card:hover .card-body p i{
-  color: var(--white) !important;
-}
+
+
 .auth-links a:hover {
   color: white;
 }
