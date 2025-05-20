@@ -991,7 +991,7 @@ body.auth-page::before {
   width: 100%;
 }
 main .card:hover{
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(63, 19, 151);
   color: white;
   cursor: pointer;
 }
